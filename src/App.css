@@ -1,10 +1,18 @@
 .App {
   text-align: center;
+  background: #3f8f8f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.leaflet-container{
+  height:60vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -24,15 +32,46 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  width: 50%;
+  top: calc(30vh - 1.5rem);
+  height: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.locate{
+  width: 7rem;
+  height: inherit;
+  border-radius: 1rem;
+  border:1px solid white;
+  cursor: pointer;
+  background: rgb(50, 108, 173) ;
+  color: white;
+  font-weight: bold;
+}
+
+.locate:hover{
+  background: rgb(31, 74, 122) ;
+}
+
+input{
+  width: 70%;
+  height: inherit;
+  border-radius: 1rem;
+  border:1px solid gray;
+  padding-inline:1rem;
+  font-size: larger;
+  color: gray;
+}
+
+input:focus-visible , input:focus{
+  outline: none;
+}
+
+.leaflet-bottom{
+  display: none;
 }
